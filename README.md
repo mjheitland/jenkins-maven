@@ -20,7 +20,7 @@ docker container run --name jenkins --rm --detach \
   --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 \
   --volume jenkins-data:/var/jenkins_home \
   --volume jenkins-docker-certs:/certs/client:ro \
-  --volume "$HOME":/home --publish 8080:8080 jenkinsci/blueocean
+  --volume "$HOME":/home --publish 8080:8080 --publish 50000:50000 jenkinsci/blueocean
 ```
 
 Copy password from
