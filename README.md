@@ -50,12 +50,14 @@ docker rm jenkins docker
 In Jenkins:
 Create a pipeline, for Definition choose "pipeline script from SCM" and set url to "https://github.com/mjheitland/jenkins-maven.git"
 
-# Installing Node.js on Jenkins
+Installing Node.js on Jenkins
 
 1. docker exec -it -u root jenkins bash
 2. apk add nodejs
 
-# Add user 'jenkins' to group 'docker' (1.) and check that it has worked (2.)
+Add user 'jenkins' to group 'docker' (1.) and check that it has worked (2. or 3.)
 
 1. addgroup jenkins docker
 2. id jenkins
+3. getent group | grep docker
+
